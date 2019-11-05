@@ -13,7 +13,7 @@ object Connection {
   val driver = "com.mysql.cj.jdbc.Driver"
   val username = "root"
   val password = ""
-  var connection:Connection = _
+  var connection: Connection = _
   var statement: Statement = null
 
   /**
