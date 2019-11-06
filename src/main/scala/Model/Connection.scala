@@ -2,6 +2,8 @@ package Model
 
 import java.sql.{Connection, DriverManager, Statement}
 
+import View.ErrorWindow
+
 /**
  * Created on 04/11/2019
  * Time 14:49H
@@ -26,6 +28,7 @@ object Connection {
       statement = connection.createStatement
     } catch {
       case e: Exception => e.printStackTrace
+        new ErrorWindow("Connection Error").visible = true
     }
   }
 
